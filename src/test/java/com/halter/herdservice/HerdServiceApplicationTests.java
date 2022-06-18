@@ -1,10 +1,10 @@
-package com.halter.adrian.backenddevelopertest;
+package com.halter.herdservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class BackendDeveloperTestApplicationTests {
+class HerdServiceApplicationTests {
 
 	@Test
 	void contextLoads() {

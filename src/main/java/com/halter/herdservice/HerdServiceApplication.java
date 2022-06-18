@@ -1,13 +1,13 @@
-package com.halter.adrian.backenddevelopertest;
+package com.halter.herdservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BackendDeveloperTestApplication {
+public class HerdServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BackendDeveloperTestApplication.class, args);
+		SpringApplication.run(HerdServiceApplication.class, args);
 	}
 
 }

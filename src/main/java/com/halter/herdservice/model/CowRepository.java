@@ -1,4 +1,4 @@
-package com.halter.adrian.backenddevelopertest.model;
+package com.halter.herdservice.model;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

@@ -1,9 +1,7 @@
-package com.halter.adrian.backenddevelopertest.controller;
+package com.halter.herdservice.controller;
 
-import com.halter.adrian.backenddevelopertest.model.Cow;
-import com.halter.adrian.backenddevelopertest.model.CowRepository;
-import com.halter.adrian.backenddevelopertest.model.CowResponse;
-import org.apache.coyote.Response;
+import com.halter.herdservice.model.Cow;
+import com.halter.herdservice.model.CowRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

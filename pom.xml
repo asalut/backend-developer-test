@@ -8,11 +8,11 @@
 		<version>2.7.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.halter.adrian</groupId>
-	<artifactId>backend-developer-test</artifactId>
+	<groupId>com.halter.herdservice</groupId>
+	<artifactId>herd-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>backend-developer-test</name>
-	<description>Backend developer test for the Software Engineer role at Halter</description>
+	<name>herd-service</name>
+	<description>Herd Service: A backend developer test for the Software Engineer role at Halter</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
