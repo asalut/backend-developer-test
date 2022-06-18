@@ -23,6 +23,10 @@ public class Cow {
     @Column(name= "collarId")
     private Long collarId;
 
+    private String collarStatus;
+
+    private String
+
     public Cow(Long cowNumber) {
         this.setCowNumber(cowNumber);
     }
