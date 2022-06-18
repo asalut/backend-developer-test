@@ -12,7 +12,7 @@
 	<artifactId>backend-developer-test</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>backend-developer-test</name>
-	<description>Backend developer test for Software Engineer role at Halter</description>
+	<description>Backend developer test for the Software Engineer role at Halter</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
