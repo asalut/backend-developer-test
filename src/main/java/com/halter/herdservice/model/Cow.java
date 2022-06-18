@@ -18,16 +18,18 @@ public class Cow {
     private UUID id;
 
     @Column(name = "cowNumber")
-    private Long cowNumber;
+    private String cowNumber;
 
     @Column(name= "collarId")
-    private Long collarId;
+    private String collarId;
 
     private String collarStatus;
 
-    private String
+    private Float lastKnownLoc_lat;
 
-    public Cow(Long cowNumber) {
+    private Float lastKnownLoc_lng;
+
+    public Cow(String cowNumber) {
         this.setCowNumber(cowNumber);
     }
 }
