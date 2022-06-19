@@ -9,7 +9,7 @@ Note: Please ensure that Docker is installed and running within the host system.
         docker-compose up
 3. When the services have started successfully and running, you can consume its APIs through port 8090
 
-Example CURL command for different endpoints:
+# Example CURL command for different endpoints
 
 Create a new cow:
 curl --request POST http://localhost:8090/cows -H "Content-Type: application/json" -d "{\"collarId\":\"1\",\"cowNumber\":\"12345\"}"
