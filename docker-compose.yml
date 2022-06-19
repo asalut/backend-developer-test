@@ -16,3 +16,9 @@ services:
       - POSTGRES_PASSWORD=password
       - POSTGRES_USER=user
       - POSTGRES_DB=halterdb
+  redis:
+    image: redis:latest
+    volumes:
+      - data:/data
+    ports:
+      - 6379:6379

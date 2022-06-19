@@ -6,6 +6,8 @@ import com.halter.herdservice.model.bean.CowResponse;
 import com.halter.herdservice.model.bean.HalterCollar;
 import com.halter.herdservice.model.repository.CowRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.util.NumberUtils;
 
@@ -24,6 +26,7 @@ public class CowService {
     @Autowired
     private HalterExternalResource halterExternalResource;
 
+    // @Cacheable(value = "cows", key = "#theCow.cowNumber")
     public CowResponse addCow(CowRequest theCow) {
         HalterCollar collarData = this.halterExternalResource.getLatestCollarData(theCow.getCollarId());
 
@@ -41,6 +44,7 @@ public class CowService {
         return new CowResponse(this.cowRepository.findByCollarId(collarId).get());
     }
 
+    // @Cacheable(value = "cows")
     public List<CowResponse> getAllCows() {
         return this.cowRepository.findAll()
                 .stream().map(moo -> new CowResponse(moo))
@@ -55,6 +59,7 @@ public class CowService {
      * @return
      * @throws Exception
      */
+    // @CachePut(value = "cows", key = "#theCow.cowNumber")
     public CowResponse updateCow(String cowId, CowRequest theCow) throws Exception {
         Optional<Cow> mooPtional = this.cowRepository.findById(UUID.fromString(cowId));
         if (mooPtional.isEmpty()) {
