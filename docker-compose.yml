@@ -1,24 +1,23 @@
-version: '1'
+version: '3.1'
 services:
-  app:
+  herd-service:
     container_name: herd-service
     image: herd-service
     build: ./
     ports:
-      - "8080:8080"
+      - 8090:8090
     depends_on:
       - postgresqldb
+      - redis
   postgresqldb:
     image: postgres
     ports:
-      - "5432:5432"
+      - 5433:5432
     environment:
       - POSTGRES_PASSWORD=password
-      - POSTGRES_USER=user
+      - POSTGRES_USER=postgres
       - POSTGRES_DB=halterdb
   redis:
     image: redis:latest
-    volumes:
-      - data:/data
     ports:
       - 6379:6379
