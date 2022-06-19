@@ -6,8 +6,8 @@ Note: Please ensure that Docker is installed and running within the host system.
 
 1. Open your CLI and go to the base directory of the project - i.e. herd-serivce-asalut
 2. Within the CLI, type the below command to create the Docker image for herd-service, and run it and its dependencies
-        docker-compose up
-3. When the services have started successfully and running, you can consume its APIs through port 8090
+* docker-compose up
+3. When the services have started successfully and running, you can consume herd-service's APIs through port 8090
 
 # Example CURL command for different endpoints
 
