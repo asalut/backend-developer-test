@@ -1,9 +1,7 @@
 package com.halter.herdservice.controller;
 
-import com.halter.herdservice.model.Cow;
 import com.halter.herdservice.model.bean.CowRequest;
 import com.halter.herdservice.model.bean.CowResponse;
-import com.halter.herdservice.model.repository.CowRepository;
 import com.halter.herdservice.service.CowService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -17,9 +15,6 @@ import java.util.UUID;
 public class CowController {
 
     @Autowired
-    private CowRepository cowRepository;
-
-    @Autowired
     private CowService cowService;
 
     @PostMapping
@@ -28,18 +23,20 @@ public class CowController {
     }
 
     @PutMapping("/{id}")
-    private ResponseEntity<Cow> addCow(@PathVariable(name = "id", required = true) UUID id) {
-        return ResponseEntity.ok(cowRepository.findById(id).get());
-    }
-
-    @GetMapping("/{collarId}")
-    private ResponseEntity<CowResponse> getCowByNumber(
-            @PathVariable(name = "collarId", required = true) String collarId) {
-        return ResponseEntity.ok(cowService.getCowByCollarId(collarId));
+    private ResponseEntity<CowResponse> updateCow(
+            @PathVariable(name = "id", required = true) String cowId,
+            @RequestBody(required = true) CowRequest request) throws Exception {
+        return ResponseEntity.ok(cowService.updateCow(cowId, request));
     }
 
     @GetMapping
-    private ResponseEntity<List<Cow>> getCows() {
-        return ResponseEntity.ok(cowRepository.findAll());
+    private ResponseEntity<List<CowResponse>> getCows() {
+        return ResponseEntity.ok(cowService.getAllCows());
+    }
+
+    @GetMapping("/{collarId}")
+    private ResponseEntity<CowResponse> getCowByCollarId(
+            @PathVariable(name = "collarId", required = true) String collarId) {
+        return ResponseEntity.ok(cowService.getCowByCollarId(collarId));
     }
 }
