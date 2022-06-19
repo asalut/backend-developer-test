@@ -12,10 +12,10 @@ Note: Please ensure that Docker is installed and running within the host system.
 # Example CURL command for different endpoints
 
 Create a new cow:
-curl --request POST http://localhost:8090/cows -H "Content-Type: application/json" -d "{\"collarId\":\"1\",\"cowNumber\":\"12345\"}"
+* curl --request POST http://localhost:8090/cows -H "Content-Type: application/json" -d "{\"collarId\":\"1\",\"cowNumber\":\"12345\"}"
 
 Update a cow:
-curl --request PUT http://localhost:8090/cows/b084fc50-6749-4bfe-92c1-986e76edbd99 -H "Content-Type: application/json" -d "{\"collarId\":\"2\",\"cowNumber\":\"12345\"}"
+* curl --request PUT http://localhost:8090/cows/b084fc50-6749-4bfe-92c1-986e76edbd99 -H "Content-Type: application/json" -d "{\"collarId\":\"2\",\"cowNumber\":\"12345\"}"
 
 Get all cows:
-curl --request GET http://localhost:8090/cows
+* curl --request GET http://localhost:8090/cows
