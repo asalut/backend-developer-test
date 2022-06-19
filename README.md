@@ -1,6 +1,12 @@
 # herd-service
 Backend developer test for Software Engineer role at Halter
 
+# Some specs
+Docker images and the ports they use:
+* herd-service - 8090:8090
+* postgresqldb - 5433:5432
+* redis - 6379:6379
+
 # How to run locally
 Note: Please ensure that Docker is installed and running within the host system.
 
